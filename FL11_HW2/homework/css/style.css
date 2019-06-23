@@ -166,17 +166,18 @@ h2 ~ p:first-of-type {
     align-items: center;
 }
 
+@media screen {
+    @keyframes banner-rotate {
+        0% {transform: rotateY(0deg);}
+        25% {transform: rotateY(90deg);}
+        50% {transform: rotateY(180deg);}
+        75% {transform: rotateY(270deg);}
+        100% {transform: rotateY(360deg);}
+    }
 
-@keyframes banner-rotate {
-    0% {transform: rotateY(0deg);}
-    25% {transform: rotateY(90deg);}
-    50% {transform: rotateY(180deg);}
-    75% {transform: rotateY(270deg);}
-    100% {transform: rotateY(360deg);}
-}
-
-p.tm-banner-text {
-    animation: banner-rotate 6s linear infinite;
+    p.tm-banner-text {
+        animation: banner-rotate 6s linear infinite;
+    }
 }
 
 @media print {
@@ -199,9 +200,11 @@ p.tm-banner-text {
     .tm-banner,
     .padding-medium,
     .heading ol,
-    #tmCarousel {
+    #tmCarousel,
+    .tm-footer,
+    .tm-content-box {
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
 
     .flex-2-col {
@@ -241,5 +244,10 @@ p.tm-banner-text {
         font-style: normal;
         text-align: center;
         line-height: normal;
+    }
+
+    .tm-banner-text {
+        letter-spacing: normal;
+        word-spacing: normal;
     }
 }
