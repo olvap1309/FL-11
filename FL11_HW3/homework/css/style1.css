@@ -1,0 +1,111 @@
+p, body {
+  margin: 0;
+  font-family: "Hind", sans-serif; }
+
+body {
+  background: #fff; }
+
+.header {
+  background: url("../img/m-h-day.jpg") center/cover no-repeat;
+  height: 100vh;
+  border-bottom-right-radius: 40%;
+  overflow: hidden; }
+  .header-wrap {
+    padding-left: 10%;
+    padding-top: 1.5rem; }
+    .header-wrap .landing-logo {
+      display: flex;
+      align-items: center;
+      color: #2b2f3c; }
+      .header-wrap .landing-logo p, .header-wrap .landing-logo body {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 20px;
+        padding-left: 22px;
+        padding-top: 5px; }
+    .header-wrap .header_heading {
+      position: relative;
+      z-index: 1;
+      font-size: 5.6rem;
+      font-weight: bold;
+      font-family: "Source Sans Pro", sans-serif;
+      width: 50%;
+      padding-top: 100px;
+      line-height: 100%;
+      color: #2b2f3c; }
+      .header-wrap .header_heading::before {
+        position: absolute;
+        content: '';
+        border-top: 30px solid #00a1c8;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+        width: 375px; }
+    .header-wrap .header_text {
+      padding-top: 40px;
+      white-space: pre-line;
+      font-size: 1.3rem;
+      color: #363b4b; }
+    .header-wrap .header_button {
+      margin-top: 80px;
+      background: #6a9600;
+      color: #fff;
+      width: 178px;
+      height: 60px;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 3px; }
+  .header span {
+    display: block;
+    font-size: 0.6rem;
+    text-align: center; }
+
+.section {
+  margin-top: 50px;
+  display: flex;
+  width: 80%;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column; }
+  .section_text {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #2b2f3c;
+    text-align: center; }
+    .section_text::after {
+      position: absolute;
+      content: '';
+      border-top: 16px solid #00a1c8;
+      z-index: -1;
+      right: 16px;
+      bottom: 10px;
+      width: 210px; }
+  .section_card_wrap {
+    display: flex;
+    margin-top: 2rem; }
+  .section .section_card {
+    padding: 25px;
+    margin: 0 13px;
+    flex: 30%;
+    height: 570px;
+    background: #20232e;
+    color: #b4c3ce;
+    border-radius: 6px; }
+    .section .section_card_img {
+      width: -webkit-fill-available;
+      border-radius: 6px; }
+    .section .section_card_heading {
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      font-family: "Source Sans Pro", sans-serif; }
+      .section .section_card_heading .section_card_underline {
+        display: inline-block;
+        width: 100%;
+        background: red; }

@@ -1,1 +1,164 @@
-// Write your styles here
+@mixin word_underline($size) {
+    position: absolute;
+    content: '';
+    border-top: $size solid map-get($map: $colors, $key: "underline");
+    z-index: -1;
+}
+
+p {
+    margin: 0;
+    font-family: map-get($map: $fonts, $key: "main"), map-get($map: $fonts, $key: "family");
+}
+
+body {
+    @extend p;
+    background: map-get($map: $colors, $key: "body");                            
+}
+
+.header {
+    background: $background center/cover no-repeat;
+    height: 100vh;
+    border-bottom-right-radius: 40%;
+    overflow: hidden;
+
+    &-wrap {
+        padding: {
+            left: 10%;
+            top: 1.5rem;
+        }
+
+        .landing-logo {
+            display: flex;
+            align-items: center;
+            color: map-get($map: $colors, $key: "header");
+            p {
+                font: {
+                    weight: 600;
+                    size: 1.6rem;
+                }
+                line-height: 20px;
+                padding: {
+                    left: 22px;
+                    top: 5px;
+                }
+            }
+        }
+
+        .header_heading {
+            position: relative;
+            z-index: 1;
+            font: {
+                size: 5.6rem;
+                weight: bold;
+                family: map-get($map: $fonts, $key: "header"), map-get($map: $fonts, $key: "family");
+            }
+            width: 50%;
+            padding: {
+                top: 100px;
+            }
+            line-height: 100%;
+            color: map-get($map: $colors, $key: "header");
+
+            &::before {
+                @include word_underline(30px);
+                left: 0;
+                bottom: 0;
+                width: 375px;
+            }
+        }
+
+        .header_text {
+            padding-top: 40px;
+            white-space: pre-line;
+            font: {
+                size: 1.3rem;
+            }
+            color: lighten($color: map-get($map: $colors, $key: "header"), $amount: 5);
+        }
+
+        .header_button {
+            margin-top: 80px;
+            background: map-get($map: $colors, $key: "button");
+            color: #fff;
+            width: 178px;
+            height: 60px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 3px;
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+}
+
+.section {
+    margin-top: 50px;
+    display: flex;
+    width: 80%;
+    margin: {
+        top: 2rem;
+        bottom: 0;
+        left: auto;
+        right: auto;
+    }
+    flex-direction: column;
+    
+    &_text {
+        position: relative;
+        margin: 0 auto;
+        z-index: 1;
+        font: {
+            size: 3rem;
+            weight: 600;
+            family: map-get($map: $fonts, $key: "header"), map-get($map: $fonts, $key: "family");
+        }
+        color: map-get($map: $colors, $key: "header");
+        text-align: center;
+
+        &::after {
+            @include word_underline(16px);
+            right: 16px;
+            bottom: 10px;
+            width: 210px;
+        }
+    }
+
+    &_card_wrap {
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    .section_card {
+        padding: 25px;
+        margin: 0 13px;
+        flex: 30%;
+        height: 570px;
+        background: map-get($map: $card, $key: "background");
+        color: map-get($map: $card, $key: "text");
+        border-radius: 6px;
+
+        &_img {
+            width: -webkit-fill-available;
+            border-radius: 6px;
+        }
+
+        &_heading {
+            text-align: center;
+            color: #fff;
+            font: {
+                size: 2rem;
+                family: map-get($map: $fonts, $key: "header"), map-get($map: $fonts, $key: "family");
+            }
+
+            .section_card_underline {
+                display: inline-block;
+                width: 100%;
+                background: red;
+            }
+        }
+    }
+}
