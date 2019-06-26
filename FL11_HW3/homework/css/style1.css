@@ -101,11 +101,20 @@ body {
       width: -webkit-fill-available;
       border-radius: 6px; }
     .section .section_card_heading {
+      position: relative;
+      z-index: 1;
       text-align: center;
+      width: fit-content;
+      margin: 0 auto;
       color: #fff;
       font-size: 2rem;
       font-family: "Source Sans Pro", sans-serif; }
       .section .section_card_heading .section_card_underline {
         display: inline-block;
         width: 100%;
-        background: red; }
+        position: absolute;
+        z-index: -1;
+        height: 16px;
+        background: #00a1c8;
+        bottom: 0;
+        left: 0; }
